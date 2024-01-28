@@ -31,17 +31,19 @@
             btnCalculate = new Button();
             inputA = new TextBox();
             inputB = new TextBox();
-            label1 = new Label();
+            lblResult = new Label();
+            ModCalc = new Button();
             SuspendLayout();
             // 
             // btnCalculate
             // 
-            btnCalculate.Location = new Point(349, 208);
+            btnCalculate.Location = new Point(317, 155);
             btnCalculate.Name = "btnCalculate";
-            btnCalculate.Size = new Size(94, 29);
+            btnCalculate.Size = new Size(172, 29);
             btnCalculate.TabIndex = 0;
-            btnCalculate.Text = "Calculate";
+            btnCalculate.Text = "Calculate Sum";
             btnCalculate.UseVisualStyleBackColor = true;
+            btnCalculate.Click += btnCalculate_Click;
             // 
             // inputA
             // 
@@ -57,21 +59,33 @@
             inputB.Size = new Size(125, 27);
             inputB.TabIndex = 2;
             // 
-            // label1
+            // lblResult
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(373, 269);
-            label1.Name = "label1";
-            label1.Size = new Size(50, 20);
-            label1.TabIndex = 3;
-            label1.Text = "label1";
+            lblResult.AutoSize = true;
+            lblResult.Location = new Point(374, 273);
+            lblResult.Name = "lblResult";
+            lblResult.Size = new Size(49, 20);
+            lblResult.TabIndex = 3;
+            lblResult.Text = "Result";
+            lblResult.Click += lblResult_Click;
+            // 
+            // ModCalc
+            // 
+            ModCalc.Location = new Point(317, 219);
+            ModCalc.Name = "ModCalc";
+            ModCalc.Size = new Size(172, 29);
+            ModCalc.TabIndex = 4;
+            ModCalc.Text = "Calculate Modulo";
+            ModCalc.UseVisualStyleBackColor = true;
+            ModCalc.Click += ModCalc_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(label1);
+            Controls.Add(ModCalc);
+            Controls.Add(lblResult);
             Controls.Add(inputB);
             Controls.Add(inputA);
             Controls.Add(btnCalculate);
@@ -86,6 +100,7 @@
         private Button btnCalculate;
         private TextBox inputA;
         private TextBox inputB;
-        private Label label1;
+        private Label lblResult;
+        private Button ModCalc;
     }
 }
